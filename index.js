@@ -14,7 +14,6 @@ const io = new Server(server,{
 server.listen(5000,()=>console.log("http://localhost:5000"));
 io.on("connection",socket=>{
     socket.on("join",({room,id})=>{
-        console.log("user join "+id);
         socket.join(room);
         socket.broadcast.to(room).emit("user-joined",{id});
         socket.on('disconnect',()=>{
