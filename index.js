@@ -7,7 +7,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server,{
     cors:{
-        origin:"https://kh-videocall.netlify.app/",
+        origin:"https://kh-videocall.netlify.app",
         methods:["GET","POST"]
         },
 });
